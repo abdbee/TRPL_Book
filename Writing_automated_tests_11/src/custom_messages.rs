@@ -11,13 +11,15 @@ pub mod tests{
     #[test]
     fn greeting_contains_name() {
         let result = greeting("basit"); // returns "hello sadiq" to the "result" variable
-        let container = "sadiq";
+        let container = "basit";
         assert!(result.contains("container"), "greeetings did not contain \"{}\". The value gotten was \"{}\"", container, result)
     }
 
     // but what if we want to ensure that our code handles error conditions correctly?
     #[test]
-    #[should_panic] //this attribute makes the test pass if the code inside the function panics
+    
+    #[should_panic(expected = "greetings should contain result")] //this attribute makes the test pass if the code inside the function panics
+    // the "expected" argument  signifies the specific panic message we are testing for. the test will fail if this panic message is not gotten after running the function
     fn did_it_panic() {
         let result = greeting("basit"); // returns "hello sadiq" to the "result" variable
         let container = "sadiq";
