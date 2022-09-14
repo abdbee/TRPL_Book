@@ -5,12 +5,25 @@ pub fn adder(a: i32, b: i32) -> i32 {
     a + b
 }
 
+//since values are being compared and the assert macros print values in debug formating, all the types must implement both the Debug and PartialEq
+//traits. since structs and enums don't implement these by default, you'll have to implement these by adding the annotation as shown in the next line.
+#[derive(PartialEq, Debug)] 
+pub struct Rectangle {
+    pub length: u32,
+    pub width: u32
+}
+
 #[cfg(test)]
 pub mod tests {
     use super::*;
     #[test]
-    pub fn did_it_add(){
-        assert_eq!(6, adder(3,3)) // assert that the adder function produces the expected value
+    pub fn test_struct(){
+        assert_eq!(Rectangle{length:3, width:3}, Rectangle{length:3, width:3} ) // assert that the adder function produces the expected value
+    }
+
+    #[test]
+    pub fn does_it_add() {
+        assert_eq!(6, adder(3,3))
     }
 }
 
