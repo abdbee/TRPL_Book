@@ -19,7 +19,7 @@ pub mod tests{
     #[test]
     
     #[should_panic(expected = "greetings should contain result")] //this attribute makes the test pass if the code inside the function panics
-    // the "expected" argument  signifies the specific panic message we are testing for. the test will fail if this panic message is not gotten after running the function
+    // the "expected" argument  signifies the specific "panic" message we are testing for. the test will fail if this panic message is not gotten after running the function
     fn did_it_panic() {
         let result = greeting("basit"); // returns "hello sadiq" to the "result" variable
         let container = "sadiq";
