@@ -1,7 +1,7 @@
 // to make a reference mutable, add 'mut' after the &
 // to be able to mutate the reference to a variable, the variable itself must be mutable.
 
-pub fn main() {
+pub fn mutable() {
     let mut s = String::from("hell");
 
     //note that you can have only one mutable reference to a data in a particular scope. this is to prevent data race
