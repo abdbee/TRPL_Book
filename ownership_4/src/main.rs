@@ -1,3 +1,6 @@
+mod mutable_reference;
+
 fn main() {
-    println!("Hello, world!");
+    mutable_reference::main();
+
 }
