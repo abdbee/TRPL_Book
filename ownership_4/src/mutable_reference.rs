@@ -13,7 +13,7 @@ pub fn mutable() {
 }
 
 pub fn change(y: &mut String) {
-    y.push_str("o, world");
+    y.push_str("oo, world");
 }
 
 // but you can always use curly braces to create a new scope for another mutable reference of the same data. 
