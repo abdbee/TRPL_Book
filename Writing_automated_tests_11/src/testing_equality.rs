@@ -31,5 +31,5 @@ pub mod tests {
 // languages where it's called "expected" and "actual"). This means that the function to be tested could come in the left or right
 // argument. The position won't matter.
 //assert_ne! is much more useful when we're not sure what the value will be, but we know what the value will not be.
-//
+//if we want to see printed values for passing test as well, we can use cargo test -- --show-output
 
